@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>投票ページ</title>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<main class="container">
+<section id="card" class="card">
+<h1>投票フォーム</h1>
+<p>このQRコードは発表者 <strong id="presenter">{{ presenter_id }}</strong> に対応しています。</p>
+<div id="prompt" class="prompt">
+<p>投票しますか?</p>
+<div class="buttons">
+<button id="voteBtn" class="btn primary">投票する</button>
+<button id="cancelBtn" class="btn">キャンセル</button>
+</div>
+</div>
+</section>
+</main>
+<script>const PRESENTER_ID = {{ presenter_id }}; const PAGE_TOKEN = "{{ token }}";</script>
+<script src="/static/js/vote.js"></script>
+</body>
+</html>
